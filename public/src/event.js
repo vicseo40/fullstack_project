@@ -86,7 +86,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (isAttending) {
                 const unattendButton = document.createElement('button');
-                unattend
                 unattendButton.textContent = 'Unattend';
                 unattendButton.classList.add('event-button', 'attend-button');
                 unattendButton.addEventListener('click', async () => {
@@ -161,4 +160,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
-
