@@ -1,0 +1,63 @@
+/* Importing Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General body and text styling */
+body, h1, h2, button {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+h1 {
+    font-size: 30px;
+}
+
+html, body {
+    height: auto; /* Allows content height to control the scrolling */
+    min-height: 100%; /* Ensures it covers at least the viewport height */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Event sections styling */
+.events, .popular-events {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.filters button {
+    background-color: #222;
+    border-radius: 30%;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: rgb(255, 59, 59);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.event-name {
+    display: inline-block;
+    background: #444;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+/* Global button styling */
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+    transform: none; 
+    transition: none;
+}

@@ -1,0 +1,146 @@
+/* Container styling for the events */
+.events-container {
+    width: 87%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
+}
+
+/* Styling for the title */
+.events-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* Styling for the event columns */
+.events-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+/* Styling for individual events */
+.event {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    width: calc(25% - 20px); /* 4 columns layout */
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.event img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+}
+
+.event h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.event p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.event i {
+    margin-right: 5px;
+}
+
+.event:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for the Add Event box */
+.add-event {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #555;
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+    border: 2px dashed #ccc;
+}
+
+.add-event-icon {
+    font-size: 48px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.add-event:hover {
+    border-color: #be8181;
+    color: #be8181;
+}
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+

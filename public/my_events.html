@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristianstad Events - My Events</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/my_events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="resources/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="all_events.html" class="icon-link">
+                <div class="icon">
+                    <img src="resources/logo.png" alt="Icon" class="logo-icon">
+                    <span id="logo-word">ristianstad Events</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="all_events.html">All Events</a></li>
+                    <li><a href="my_events.html" class="active">My Events</a></li>
+                    <li><a href="bookmarks.html">Bookmarks</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="my-profile">
+                <a href="profile.html" class="profile-link">My Profile</a>
+                <a href="profile.html" class="profile-link">
+                    <button type="button">
+                        <img src="resources/profile_img.png" alt="Profile" class="profile-icon">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="events-container">
+            <h1 class="events-title">My Events</h1>
+            <section class="events-column" id="events-column">
+                <!-- Event articles will be dynamically loaded here -->
+                <!-- Add Event Box -->
+                <article class="event add-event">
+                    <div class="add-event-icon">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <h3>Add Event</h3>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <div id="editEventModal" class="modal">
+        <div class="modal-content">
+            <span id="closeEditModal" class="close-modal">&times;</span>
+            <h2>Edit Event</h2>
+            <form id="edit-event-form">
+                <div class="form-group">
+                    <label for="edit-title">Event Title</label>
+                    <input type="text" id="edit-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-image">Event Image</label>
+                    <input type="file" id="edit-image" name="image" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="edit-date">Event Date</label>
+                    <input type="date" id="edit-date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-location">Event Location</label>
+                    <input type="text" id="edit-location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-category">Category</label>
+                    <select id="edit-category" name="category" required>
+                        <option value="Sports">Sports</option>
+                        <option value="Music">Music</option>
+                        <option value="Film">Film</option>
+                        <option value="Business">Business</option>
+                        <option value="Education">Education</option>
+                        <option value="Social">Social Gathering</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-age-restriction">Age Restriction</label>
+                    <select id="edit-age-restriction" name="ageRestriction" required>
+                        <option value="Family-Friendly">Family Friendly (0+)</option>
+                        <option value="Not Family-Friendly">Not Family Friendly (17+)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-description">Event Description</label>
+                    <textarea id="edit-description" name="description" rows="4" required></textarea>
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="src/my_events.js"></script>
+</body>
+</html>

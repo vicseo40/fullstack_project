@@ -1,0 +1,66 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristianstad Events - Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="icon" href="resources/logo.png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="all_events.html" class="icon-link">
+                <div class="icon">
+                    <img src="resources/logo.png" alt="Icon" class="logo-icon">
+                    <span id="logo-word">ristianstad Events</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="all_events.html">All Events</a></li>
+                    <li><a href="my_events.html">My Events</a></li>
+                    <li><a href="bookmarks.html">Bookmarks</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="my-profile">
+                <a href="profile.html" class="profile-link">My Profile</a>
+                <a href="profile.html" class="profile-link">
+                    <button type="button">
+                        <img src="resources/profile_img.png" alt="Profile" class="profile-icon">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="admin-container">
+            <h1 class="admin-title">Admin Page</h1>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Admin</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                    <!-- Users will be dynamically loaded here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="src/admin.js"></script>
+</body>
+</html>

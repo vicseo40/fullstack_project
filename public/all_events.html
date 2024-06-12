@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristianstad Events - All Events</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/filter_column.css">
+    <link rel="stylesheet" href="css/all_events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="resources/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="all_events.html" class="icon-link">
+                <div class="icon">
+                    <img src="resources/logo.png" alt="Icon" class="logo-icon">
+                    <span id="logo-word">ristianstad Events</span>
+                </div>
+            </a>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="all_events.html" class="active">All Events</a></li>
+                    <li id="myEventsLink" style="display: none;"><a href="my_events.html">My Events</a></li>
+                    <li id="bookmarksLink" style="display: none;"><a href="bookmarks.html">Bookmarks</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="my-profile" id="authLinks" style="display: none;">
+                <a href="profile.html" class="profile-link">My Profile</a>
+                <a href="profile.html" class="profile-link">
+                    <button type="button">
+                        <img src="resources/profile_img.png" alt="Profile" class="profile-icon">
+                    </button>
+                </a>
+            </div>
+            <div class="my-profile" id="guestLinks">
+                <a href="login.html" class="profile-link">Login</a>
+                <p>/</p>
+                <a href="signup.html" class="profile-link signup-link">Signup</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="filter-column">
+                <h2>Filters</h2>
+                <form>
+                    <div class="filter-section">
+                        <h3>Month</h3>
+                        <input type="month" id="month" name="month">
+                    </div>
+                    <div class="filter-section">
+                        <h3>Category</h3>
+                        <label><input type="checkbox" name="category" value="Sports"> Sports</label>
+                        <label><input type="checkbox" name="category" value="Music"> Music</label>
+                        <label><input type="checkbox" name="category" value="Film"> Film</label>
+                        <label><input type="checkbox" name="category" value="Business"> Business</label>
+                        <label><input type="checkbox" name="category" value="Education"> Education</label>
+                        <label><input type="checkbox" name="category" value="Social"> Social Gathering</label>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Age Restriction</h3>
+                        <label><input type="radio" name="age" value="Family-Friendly"> Family Friendly (0+)</label>
+                        <label><input type="radio" name="age" value="Not Family-Friendly"> Not Family Friendly (17+)</label>
+                    </div>
+                    <div class="filter-section">
+                        <h3>Sort by</h3>
+                        <label><input type="radio" name="sort" value="date-asc"> Date (Ascending)</label>
+                        <label><input type="radio" name="sort" value="date-desc"> Date (Descending)</label>
+                        <label><input type="radio" name="sort" value="name-asc"> Name (Ascending)</label>
+                        <label><input type="radio" name="sort" value="name-desc"> Name (Descending)</label>
+                    </div>
+                </form>
+            </section>
+            <div class="events-container">
+                <h1 class="events-title">All Events</h1>
+                <section class="events-column" id="events-column">
+                    <!-- Events will be dynamically loaded here -->
+                </section>
+                <a href="#" class="view-more-link" id="view-more-link">View More</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/api/auth/status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.isAuthenticated) {
+                        document.getElementById('myEventsLink').style.display = 'inline';
+                        document.getElementById('bookmarksLink').style.display = 'inline';
+                        document.getElementById('authLinks').style.display = 'flex';
+                        document.getElementById('guestLinks').style.display = 'none';
+                    } else {
+                        // Center the All Events nav for guest users
+                        document.getElementById('nav-list').style.justifyContent = 'center';
+                        const signupLink = document.querySelector('.signup-link');
+                        signupLink.style.fontSize = '14px';
+                        signupLink.style.color = '#ccc';
+                    }
+                })
+                .catch(error => console.error('Error fetching auth status:', error));
+        });
+    </script>
+    <script src="src/all_events.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristianstad Events - Signup</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="icon" href="resources/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="video-background">
+        <video id="background-video" autoplay loop muted>
+            <source src="resources/concert_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="signup-container">
+        <img src="resources/logo.png" alt="Logo" class="signup-logo">
+        <div class="welcome-text">Welcome to Kristianstad Events</div>
+        <div class="signup-form">
+            <h2>Signup</h2>
+            <form id="signup-form">
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-envelope icon"></i>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-key icon"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-key icon"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div id="error-message" style="color: red; display: none;"></div>
+                <div id="success-message" style="color: green; display: none;"></div>
+                <button type="submit" id="signup-button">Sign Up</button>
+            </form>
+            <p class="account-text">Already have an account? <a href="login.html" class="login-link">Login here</a></p>
+        </div>
+    </div>
+    <script src="src/signup.js"></script>
+</body>
+</html>

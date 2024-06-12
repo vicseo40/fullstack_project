@@ -1,0 +1,60 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristianstad Events - Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="icon" href="resources/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="all_events.html" class="icon-link">
+                <div class="icon">
+                    <img src="resources/logo.png" alt="Icon" class="logo-icon">
+                    <span id="logo-word">ristianstad Events</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="all_events.html">All Events</a></li>
+                    <li><a href="my_events.html">My Events</a></li>
+                    <li><a href="bookmarks.html">Bookmarks</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="my-profile">
+                <a href="profile.html" class="profile-link" id="profile-page-header">My Profile</a>
+                <a href="profile.html" class="profile-link">
+                    <button type="button">
+                        <img src="resources/profile_img.png" alt="Profile" class="profile-icon">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <h1 class="profile-title">My Profile</h1>
+            <img src="resources/profile_img.png" alt="Profile Image" class="profile-img">
+            <p class="username">Username</p>
+            <p class="fullname-title">Fullname: <span class="fullname">Peter Jones</span></p>
+            <p class="email-title">Email: <span class="email">peter@jones.com</span></p>
+            <div class="button-container">
+                <a href="password_change.html"><button class="profile-button">Change Password</button></a>
+                <button id="logoutButton" class="profile-button">Logout</button>
+                <a href="admin.html" id="adminPageButton" style="display: none;"><button class="profile-button">Admin Page</button></a>
+            </div>
+        </div>
+    </main>
+    <script src="src/profile.js"></script>
+</body>
+</html>

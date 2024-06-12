@@ -1,0 +1,170 @@
+/* Style for the video background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+/* Style for the login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 70px 20px; 
+}
+
+.login-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.login-form {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px; 
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-container {
+    position: relative;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Add padding to make space for the icon */
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form input[type="email"]::placeholder,
+.login-form input[type="password"]::placeholder {
+    color: #aaa;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.button-link {
+    width: 100%; /* Ensure the link takes up the full width */
+    display: inline-block; /* Make the link behave like an inline-block element */
+}
+
+
+#login-button{
+    width: calc(100% - 20px); /* Adjust width to maintain symmetry */
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+#login-button:hover{
+    background-color: #333;
+}
+
+.signup-link {
+    display: block;
+    margin: 15px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.login-form p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.forgot-password-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+.logged-out-homepage{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logged-out-homepage:hover{
+    text-decoration: underline;
+}

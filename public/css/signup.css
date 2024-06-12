@@ -1,0 +1,147 @@
+/* Style for the video background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: -1; /* Ensure it stays above the video but below other content */
+}
+
+/* Style for the signup container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 70px 20px; 
+}
+
+.signup-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.signup-form {
+    background-color: rgba(255, 255, 255, 0.979);
+    padding: 20px; 
+    text-align: center;
+    width: 100%;
+    max-width: 400px; 
+    margin-bottom: 50px;
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-container {
+    position: relative;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Add padding to make space for the icon */
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+}
+
+.signup-form input[type="text"]::placeholder,
+.signup-form input[type="email"]::placeholder,
+.signup-form input[type="password"]::placeholder {
+    color: #aaa;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.button-link {
+    width: 100%; /* Ensure the link takes up the full width */
+    display: inline-block; /* Make the link behave like an inline-block element */
+}
+
+#signup-button{
+    width: calc(100% - 20px); /* Adjust width to maintain symmetry */
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+#signup-button:hover{
+    background-color: #333;
+}
+
+.login-link {
+    margin-left: 5px; /* Add margin to separate the text */
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.account-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
