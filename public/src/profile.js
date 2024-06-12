@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullnameElement = document.querySelector('.fullname');
     const emailElement = document.querySelector('.email');
     const logoutButton = document.getElementById('logoutButton');
-    const adminNavItem = document.querySelector('nav ul li a[href="admin.html"]').parentElement;
+    const adminNavItem = document.getElementById('admin-nav');
 
     function loadProfile() {
         fetch('/api/users/profile')
@@ -15,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Check if user is admin and display admin nav item
                 if (user.isAdmin) {
-                    adminNavItem.style.display = 'block';
-                } else {
-                    adminNavItem.style.display = 'none';
+                    adminNavItem.style.display = 'inline';
                 }
             })
             .catch(error => console.error('Error fetching profile:', error));

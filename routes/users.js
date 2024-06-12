@@ -96,13 +96,14 @@ router.get('/current', (req, res) => {
 // Get current user's profile
 router.get('/profile', ensureAuthenticated, async (req, res) => {
     try {
-        const user = await User.findById(req.user.id).select('username firstName lastName email');
+        const user = await User.findById(req.user.id).select('username firstName lastName email isAdmin');
         res.json(user);
     } catch (error) {
         console.error('Error fetching user profile:', error);
         res.status(500).json({ message: 'Error fetching user profile', error });
     }
 });
+
 
 
 
